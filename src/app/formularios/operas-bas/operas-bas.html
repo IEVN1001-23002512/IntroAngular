@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                <div class="form-group pt-4">
+                    <label for="num1">Número 1:</label>
+                    <input [(ngModel)]="num1" name="num1" type="text" class="form-control"
+                        id="num1" placeholder="Ingrese número 1">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="num2">Número 2:</label>
+                    <input [(ngModel)]="num2" name="num2" type="text" class="form-control"
+                        id="num2" placeholder="Ingrese número 2">
+                </div>
+                <br>
+                <label>Seleccione una operación:</label>
+                
+                <div class="form-check">
+                    <input [(ngModel)]="operacion" name="operacion" value="sumar" 
+                        type="radio" class="form-check-input" id="sumar">
+                    <label class="form-check-label" for="sumar">
+                        +
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input [(ngModel)]="operacion" name="operacion" value="restar" 
+                        type="radio" class="form-check-input" id="restar">
+                    <label class="form-check-label" for="restar">
+                        -
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input [(ngModel)]="operacion" name="operacion" value="multi" 
+                        type="radio" class="form-check-input" id="multi">
+                    <label class="form-check-label" for="multi">
+                        *
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input [(ngModel)]="operacion" name="operacion" value="divi" 
+                        type="radio" class="form-check-input" id="divi">
+                    <label class="form-check-label" for="divi">
+                        /
+                    </label>
+                </div>
+
+                <br>
+                <button (click)="calcular()" type="button" class="btn btn-primary">
+                    Calcular
+                </button>
+                <!--<button (click)="sumar()" type="button" class="btn btn-primary">
+                    Sumar
+                </button>
+                <br>
+                <button (click)="restar()" type="button" class="btn btn-primary">
+                    Restar
+                </button>
+                <br>
+                <button (click)="multi()" type="button" class="btn btn-primary">
+                    Multiplicar
+                </button>
+                <br>
+                <button (click)="divi()" type="button" class="btn btn-primary">
+                    Dividir
+                </button>-->
+            </form>
+            </div>
+            <div class="col-6">
+                <h2>Resultado: {{resultado}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

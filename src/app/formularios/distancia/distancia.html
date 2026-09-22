@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                <label>Ingrese la posición de los 2 puntos:</label>
+                <br>
+                <label>Punto 1:</label>
+                <div class="form-group pt-4">
+                    <label for="p1x">X:</label>
+                    <input [(ngModel)]="p1x" name="p1x" type="number" class="form-control"
+                        id="p1x" placeholder="Posición del punto 1 en X">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="p1y">Y:</label>
+                    <input [(ngModel)]="p1y" name="p1y" type="number" class="form-control"
+                        id="p1y" placeholder="Posición del punto 1 en Y">
+                </div>
+                <br>
+                <label>Punto 2:</label>
+                <div class="form-group pt-4">
+                    <label for="p2x">X:</label>
+                    <input [(ngModel)]="p2x" name="p2x" type="number" class="form-control"
+                        id="p2x" placeholder="Posición del punto 2 en X">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="p2y">Y:</label>
+                    <input [(ngModel)]="p2y" name="p2y" type="number" class="form-control"
+                        id="p2y" placeholder="Posición del punto 2 en Y">
+                </div>
+                
+                <br>
+                <button (click)="distancia()" type="button" class="btn btn-primary">
+                    Calcular Distancia
+                </button>
+            </form>
+            </div>
+            <div class="col-6">
+                <h2>Distancia de punto 1 a 2: {{resultado}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

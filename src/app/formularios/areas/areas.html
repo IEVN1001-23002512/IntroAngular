@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form>
+                <label>Seleccione el Area que quiere calcular:</label>
+                
+                <div class="form-check">
+                    <input [(ngModel)]="area" name="area" value="tri" 
+                        type="radio" class="form-check-input" id="tri">
+                    <label class="form-check-label" for="triangulo">
+                        Triangulo
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input [(ngModel)]="area" name="area" value="rec" 
+                        type="radio" class="form-check-input" id="rec">
+                    <label class="form-check-label" for="rec">
+                        Rectangulo
+                    </label>
+                </div>
+
+                <div class="form-group pt-4">
+                    <label for="base">Base:</label>
+                    <input [(ngModel)]="base" name="base" type="text" class="form-control"
+                        id="base" placeholder="Ingrese la base del triangulo/rectangulo">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="alt">Altura:</label>
+                    <input [(ngModel)]="alt" name="alt" type="text" class="form-control"
+                        id="alt" placeholder="Ingrese la altura del triangulo/rectangulo">
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <input [(ngModel)]="area" name="area" value="cir" 
+                        type="radio" class="form-check-input" id="cir">
+                    <label class="form-check-label" for="cir">
+                        Circulo
+                    </label>
+                </div>
+
+                <div class="form-group pt-4">
+                    <label for="radio">Radio:</label>
+                    <input [(ngModel)]="radio" name="radio" type="text" class="form-control"
+                        id="radio" placeholder="Ingrese el radio del circulo">
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <input [(ngModel)]="area" name="area" value="pen" 
+                        type="radio" class="form-check-input" id="pen">
+                    <label class="form-check-label" for="pen">
+                        Pentagono
+                    </label>
+                </div>
+
+                <div class="form-group pt-4">
+                    <label for="lado">Lado:</label>
+                    <input [(ngModel)]="lado" name="lado" type="text" class="form-control"
+                        id="lado" placeholder="Ingrese la longitud de un lado del pentagono">
+                </div>
+                <div class="form-group pt-4">
+                    <label for="ap">Apotema:</label>
+                    <input [(ngModel)]="ap" name="ap" type="text" class="form-control"
+                        id="ap" placeholder="Ingrese el apotema del pentagono">
+                </div>
+                <br>
+
+                <br>
+                <button (click)="calcular()" type="button" class="btn btn-primary">
+                    Calcular Area
+                </button>
+            </form>
+            </div>
+            <div class="col-6">
+                <h2>Resultado: {{resultado}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

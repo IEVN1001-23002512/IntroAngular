@@ -14,8 +14,8 @@ export class Distancia {
   
   distancia(): void{
     this.resultado=Math.sqrt(
-      Math.pow(parseFloat(this.p2x),2)-Math.pow(parseFloat(this.p1x),2)+
-      Math.pow(parseFloat(this.p2y),2)-Math.pow(parseFloat(this.p1y),2)
+      Math.pow(parseFloat(this.p2x)-parseFloat(this.p1x),2)+
+      Math.pow(parseFloat(this.p2y)-parseFloat(this.p1y),2)
     );
   }
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-6">
+
+                <div class="card mt-5">
+
+                    <div class="card-header text-center">
+
+                        <h3>ANÁLISIS DE FRASE</h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <form>
+
+                            <div class="form-group">
+
+                                <label for="frase">
+                                    Escriba una frase:
+                                </label>
+
+                                <input [(ngModel)]="frase"
+                                    name="frase"
+                                    type="text"
+                                    class="form-control"
+                                    id="frase"
+                                    placeholder="Ingrese una frase">
+
+                            </div>
+
+                            <div class="text-center pt-4">
+
+                                <button (click)="analizar()"
+                                    type="button"
+                                    class="btn btn-primary">
+
+                                    Analizar
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                        <div class="pt-4">
+
+                            <h5>Vocales: {{numeroVocales}}</h5>
+                            <p>{{vocales}}</p>
+
+                            <h5>Consonantes: {{numeroConsonantes}}</h5>
+                            <p>{{consonantes}}</p>
+
+                            <h5>{{mensaje}}</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

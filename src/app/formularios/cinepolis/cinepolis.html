@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Cinépolis</title>
+
+</head>
+
+
+<body
+    style="
+        background-image: url('https://brandemia.org/sites/default/files/inline/images/cinepolis_logo_antes.jpg');
+        background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;
+    ">
+
+
+    <div class="container">
+
+        <div class="text-center mt-4 mb-4">
+
+            <h1 class="display-2 fw-bold text-white">
+
+                Cinépolis
+
+            </h1>
+
+        </div>
+
+
+        <div class="row mt-4">
+
+            <div class="col-6">
+
+                <fieldset class="border border-light p-4 bg-light">
+
+                    <legend class="float-none w-auto px-3">
+
+                        Entradas
+
+                    </legend>
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+
+                            Nombre:
+
+                        </label>
+
+                        <input [(ngModel)]="nombre" name="nombre" type="text"
+                            class="form-control" id="nombre">
+
+                    </div>
+
+                    <div class="form-group pt-3">
+
+                        <label for="cantidadC">
+
+                            Cantidad Compradores:
+
+                        </label>
+
+                        <input [(ngModel)]="cantidadC" name="cantidadC" type="number" class="form-control"
+                            id="cantidadC" min="1" step="1" [disabled]="contadorC > 0">
+
+                    </div>
+
+                    <div class="form-group pt-3">
+
+                        <label>
+
+                            Tarjeta Cineco:
+
+                        </label>
+
+
+                        <div class="form-check">
+
+                            <input [(ngModel)]="tarjeta" name="tarjeta" value="si" type="radio"
+                                class="form-check-input" id="si">
+
+                            <label class="form-check-label"
+                                for="si">
+
+                                Sí
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="form-check">
+
+                            <input [(ngModel)]="tarjeta" name="tarjeta" value="no"
+                                type="radio" class="form-check-input" id="no">
+
+                            <label class="form-check-label"
+                                for="no">
+
+                                No
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group pt-3">
+
+                        <label for="cantidadB">
+
+                            Cantidad De Boletas:
+
+                        </label>
+
+                        <input [(ngModel)]="cantidadB" name="cantidadB" type="number"
+                            class="form-control" id="cantidadB" min="1" max="7">
+
+                    </div>
+
+
+                </fieldset>
+
+            </div>
+
+            <div class="col-6">
+
+                <fieldset class="border border-light p-4 bg-light">
+
+                    <legend class="float-none w-auto px-3">
+
+                        Salidas
+
+                    </legend>
+
+                    <div class="form-group">
+
+                        <label for="valorP">
+
+                            Valor a Pagar:
+
+                        </label>
+
+                        <input [value]="valorP | currency:'$'" type="text" class="form-control"
+                            id="valorP" readonly>
+
+                    </div>
+
+
+                </fieldset>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-4">
+
+            <div class="col-4">
+
+                <fieldset class="border border-light p-4 bg-light">
+
+                    <legend class="float-none w-auto px-3">
+
+                        Acciones
+
+                    </legend>
+
+
+                    <div class="text-center">
+
+                        <button (click)="procesar()" type="button" class="btn btn-primary me-2">
+
+                            Procesar
+
+                        </button>
+
+
+                        <button (click)="limpiar()" type="button" class="btn btn-secondary">
+
+                            Salir
+
+                        </button>
+
+                    </div>
+
+
+                </fieldset>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

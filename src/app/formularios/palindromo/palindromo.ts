@@ -55,13 +55,13 @@ export class Palindromo {
 
                 }
 
-                arregloFrase[cantidadCaracteres] = caracter;
+                arreglof[cantidadCaracteres] = caracter;
 
                 cantidadCaracteres++;
 
                 let esVocal: boolean = false;
 
-                for (let vocal of arregloVocales) {
+                for (let vocal of arreglov) {
 
                     if (caracter == vocal) {
                         esVocal = true;
@@ -71,16 +71,16 @@ export class Palindromo {
 
                 if (esVocal == true) {
 
-                    this.numeroVocales++;
-                    this.vocales = this.vocales + caracter;
+                    this.numvoc++;
+                    this.voc = this.voc + caracter;
 
                 } else {
 
                     let esConsonante: boolean = false;
 
-                    for (let consonante of arregloConsonantes) {
+                    for (let cons of arregloc) {
 
-                        if (caracter == consonante) {
+                        if (caracter == cons) {
                             esConsonante = true;
                         }
 
@@ -88,8 +88,8 @@ export class Palindromo {
 
                     if (esConsonante == true) {
 
-                        this.numeroConsonantes++;
-                        this.consonantes = this.consonantes + caracter;
+                        this.numcons++;
+                        this.cons = this.cons + caracter;
 
                     }
 
@@ -103,7 +103,7 @@ export class Palindromo {
 
         for (let i = 0; i < cantidadCaracteres; i++) {
 
-            if (arregloFrase[i] != arregloFrase[cantidadCaracteres - 1 - i]) {
+            if (arreglof[i] != arreglof[cantidadCaracteres - 1 - i]) {
 
                 esPalindromo = false;
 

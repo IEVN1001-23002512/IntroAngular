@@ -1,3 +1,8 @@
+IEVN1001
+Emmanuel Alejandro Romero Magaña
+23002512
+romema0920@gmail.com
+
 # IntroAngular
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
